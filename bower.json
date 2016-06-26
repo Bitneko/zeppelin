@@ -1,0 +1,11 @@
+{
+  "name": "project",
+  "version": "1.0.0",
+  "dependencies": {
+    "jquery": "latest"
+  },
+  "group": {
+    "plugins": [],
+    "vendor": ["jquery"]
+  }
+}

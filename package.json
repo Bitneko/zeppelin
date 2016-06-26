@@ -1,0 +1,52 @@
+{
+  "name": "tauzia",
+  "repository": {
+    "type": "git",
+    "url": "​http://stage.project.sg2lamp01.readingroom.com.sg"
+  },
+  "version": "1.0.0",
+  "dependencies": {
+    "gulp": "latest",
+    "gulp-load-plugins": "latest",
+    "gulp-rsync": "latest",
+    "gulp-imagemin": "latest",
+    "gulp-sass": "latest",
+    "gulp-scss-lint": "latest",
+    "gulp-bower": "latest",
+    "gulp-jshint": "latest",
+    "gulp-uglify": "latest",
+    "gulp-concat": "latest",
+    "gulp-pug": "latest",
+    "gulp-postcss": "*",
+    "gulp-rename": "*",
+    "gulp-clean-css": "*",
+    "foldero": "latest",
+    "browser-sync": "latest",
+    "del": "latest",
+    "postcss-unmq": "*",
+    "imagemin-pngquant": "latest",
+    "jshint": "latest",
+    "main-bower-files": "latest"
+  },
+  "//": "CUSTOM CONFIGURATION",
+  "config": {
+    "host": "127.0.0.1",
+    "port": "3000",
+    "baseUrl": "./",
+    "scssLinter": "./_styles/.scss-lint.yml",
+    "directories": {
+      "destination": "dist",
+      "temporary": "tmp",
+      "//": "Directories relative to root directory",
+      "scripts": "_scripts",
+      "styles": "_styles",
+      "images": "_images",
+      "fonts": "_fonts",
+      "pug": "_pug",
+      "server": "_server",
+      "icomoon": "icomoon/fonts",
+      "data": "_data",
+      "bower": "libs"
+    }
+  }
+}
