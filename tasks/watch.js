@@ -40,6 +40,11 @@ module.exports = function (gulp, plugins, browserSync, pkg) {
         // Watch for changes in pug templates
         gulp.watch(dir.pug + '/**/*.pug', ['pug']);
 
+        // Watch for changes in pug data files in JSON/YAML
+        gulp.watch([
+            dir.pug + '/**/*.{json,yml,yaml}'
+            ], ['pug']
+        );
 
         // Watch for changes in destination folder
         gulp.watch([
@@ -48,7 +53,7 @@ module.exports = function (gulp, plugins, browserSync, pkg) {
         ]).on('change', function(){
             // Make sure tasks complete properly before triggering
             clearTimeout(syncTimer);
-            syncTimer = setTimeout(browserSync.reload, 500);
+            syncTimer = setTimeout(browserSync.reload, config.reloadDelay);
         });
     };
 }

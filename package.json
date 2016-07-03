@@ -37,6 +37,7 @@
     "directories": {
       "destination": "dist",
       "temporary": "tmp",
+      "reloadDelay": 500,
       "//": "Directories relative to root directory",
       "scripts": "_scripts",
       "styles": "_styles",
