@@ -34,10 +34,10 @@
     "port": "3000",
     "baseUrl": "./",
     "scssLinter": "./_styles/.scss-lint.yml",
+    "reloadDelay": 500,
     "directories": {
       "destination": "dist",
       "temporary": "tmp",
-      "reloadDelay": 500,
       "//": "Directories relative to root directory",
       "scripts": "_scripts",
       "styles": "_styles",
