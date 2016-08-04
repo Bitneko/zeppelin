@@ -38,18 +38,19 @@ module.exports = function (gulp, plugins, browserSync, pkg) {
         gulp.watch(dir.styles + '/**/*.scss', ['sass', 'scss-lint']);
 
         // Watch for changes in pug templates
-        gulp.watch(dir.pug + '/**/*.pug', ['pug']);
+        gulp.watch(dir.pug + '/**/*.pug', ['pug-watch']);
 
         // Watch for changes in pug data files in JSON/YAML
         gulp.watch([
             dir.pug + '/**/*.{json,yml,yaml}'
-            ], ['pug']
+            ], ['pug-watch']
         );
 
         // Watch for changes in destination folder
         gulp.watch([
             dest + '/**/*',
-            '!' + dest + '/**/*.css'
+            '!' + dest + '/**/*.css',
+            '!' + dest + '/**/*.html'
         ]).on('change', function(){
             // Make sure tasks complete properly before triggering
             clearTimeout(syncTimer);

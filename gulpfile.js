@@ -38,6 +38,9 @@ gulp.task('copy-dist', require('./tasks/copy-dist')(gulp, plugins, pkg));
  * Pug
  */
 gulp.task('pug', require('./tasks/pug')(gulp, plugins, pkg));
+gulp.task('pug-watch', ['pug'], function(){ 
+    browserSync.reload();
+});
 
 /**
  * Sass Tasks
