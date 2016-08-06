@@ -45,6 +45,7 @@ module.exports = function (gulp, plugins, pkg) {
                       data: siteData
                     }
                 },
+                basedir: baseDir,
                 pretty: true
             }))
             .on('error', function (error) {
